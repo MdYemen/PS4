@@ -1,0 +1,68 @@
+<html>
+	<head>
+		<link rel="stylesheet prefetch" href="../pages.css">
+	</head>
+<body onload="go()">
+<script>
+if(document.cookie.indexOf('kex=0') >= 0)
+    document.location.href = 'index755.html';
+</script>
+<script>
+function print(){}
+
+var scriptCode = '';
+
+function preloadScripts(lst)
+{
+    for(var i = 0; i < lst.length; i++)
+    {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', lst[i], false);
+        xhr.send('');
+        scriptCode += xhr.responseText + '\n';
+    }
+}
+
+function done()
+{
+    if(main_ret == 0 || main_ret == 179)
+    {
+        alert("\u0627\u0644\u0622\u0646\u0020\u0643\u0644\u0020\u0634\u064a\u0621\u0020\u062c\u0627\u0647\u0632 \n \u0627\u0642\u0641\u0644 \u0627\u0644\u0635\u0641\u062D\u0629 \u0648\u0627\u0642\u0641\u0644 \u0627\u0644\u0645\u062A\u0635\u0641\u062D \n \u0645\u0639\u0020\u062a\u062d\u064a\u0627\u062a\u0020\u0645\u0627\u0633\u0641\u0020\u062f\u0627\u062a\u0627");
+        read_ptr_at(0);
+    }
+    else
+        alert("\u0644\u0644\u0627\u0633\u0641 \u062D\u0635\u0644\u062A \u0645\u0634\u0643\u0644\u0629 \n \u0628\u0631\u062C\u0627\u0621 \u0627\u0639\u0627\u062F\u0629 \u062A\u0634\u063A\u064A\u0644 \u0627\u0644\u062C\u0647\u0627\u0632 \u0648\u0627\u0644\u0645\u062D\u0627\u0648\u0644\u0629 \u0645\u0631\u0629 \u0623\u062E\u0631\u0649.");
+}
+
+window.midExploit = function()
+{
+    if(document.location.hash)
+    {
+        var s = decodeURIComponent(document.location.hash.substr(3));
+		preloadScripts(['755.js', 'jb755.js', 'mira755.js', s, 'c-code755.js'], go);
+	}
+    else
+		preloadScripts(['755.js', 'jb755.js', 'mira755.js', 'c-code755.js'], go);
+}
+
+window.postExploit = function()
+{
+    document.cookie = 'kex=0';
+    setTimeout(function() //update the screen one last time...
+    {
+        eval.call(window, scriptCode);
+        done();
+    }, 1000);
+};
+</script>
+<script src="utils.js"></script>
+<script src="int64.js"></script>
+<script src="ps4.js"></script>
+<button id="input1" onfocus="handle2()"></button>
+<button id="input2"></button>
+<select id="select1">
+	<option value="value1"> Youtube: DrCable </option>
+</select>
+<button id="input3" onfocus="handle2()"></button>
+</body>
+</html>
